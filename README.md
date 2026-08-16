@@ -85,3 +85,13 @@ contract SimpleTransfer {
         ownerOf[tokenId] = to;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RoyaltyInfo {
+    uint256 public royaltyBps = 500; // 5%
+
+    function setRoyalty(uint256 bps) external {
+        royaltyBps = bps;
+    }
+}
