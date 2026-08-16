@@ -74,3 +74,14 @@ contract NFTOperator {
         isApprovedForAll[msg.sender][operator] = approved;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SimpleTransfer {
+    mapping(uint256 => address) public ownerOf;
+
+    function transfer(uint256 tokenId, address to) external {
+        require(ownerOf[tokenId] == msg.sender, "Not owner");
+        ownerOf[tokenId] = to;
+    }
+}
