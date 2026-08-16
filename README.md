@@ -50,3 +50,17 @@ contract LockPeriod {
         return block.timestamp < lockUntil[user];
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LockPeriod {
+    mapping(address => uint256) public lockUntil;
+
+    function lock(uint256 duration) external {
+        lockUntil[msg.sender] = block.timestamp + duration;
+    }
+
+    function isLocked(address user) external view returns (bool) {
+        return block.timestamp < lockUntil[user];
+    }
+}
