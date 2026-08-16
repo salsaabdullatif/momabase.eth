@@ -11,3 +11,18 @@ contract DutchStyle {
         return startPrice - (startPrice * elapsed / 1 days);
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CrowdfundingGoal {
+    uint256 public goal = 10 ether;
+    uint256 public raised;
+
+    function contribute() external payable {
+        raised += msg.value;
+    }
+
+    function goalReached() external view returns (bool) {
+        return raised >= goal;
+    }
+}
