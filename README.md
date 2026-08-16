@@ -64,3 +64,13 @@ contract LockPeriod {
         return block.timestamp < lockUntil[user];
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NFTOperator {
+    mapping(address => mapping(address => bool)) public isApprovedForAll;
+
+    function setApprovalForAll(address operator, bool approved) external {
+        isApprovedForAll[msg.sender][operator] = approved;
+    }
+}
