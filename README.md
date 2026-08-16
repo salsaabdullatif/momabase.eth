@@ -26,3 +26,13 @@ contract CrowdfundingGoal {
         return raised >= goal;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StakingDeposit {
+    mapping(address => uint256) public staked;
+
+    function stake() external payable {
+        staked[msg.sender] += msg.value;
+    }
+}
