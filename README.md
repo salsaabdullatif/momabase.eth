@@ -114,3 +114,13 @@ contract WhitelistMint {
         whitelistOnly = enabled;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RevealFlag {
+    bool public revealed;
+
+    function reveal() external {
+        revealed = true;
+    }
+}
