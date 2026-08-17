@@ -124,3 +124,13 @@ contract RevealFlag {
         revealed = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ContractURI {
+    string public contractURI;
+
+    function setContractURI(string calldata uri) external {
+        contractURI = uri;
+    }
+}
