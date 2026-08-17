@@ -104,4 +104,13 @@ contract OfferSystem {
     function makeOffer(uint256 tokenId) external payable {
         offers[tokenId] = msg.value;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract WhitelistMint {
+    bool public whitelistOnly = true;
+
+    function setWhitelistOnly(bool enabled) external {
+        whitelistOnly = enabled;
+    }
 }
