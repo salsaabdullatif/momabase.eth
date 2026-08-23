@@ -154,3 +154,14 @@ contract OnChainMetadata {
         onChainMetadata = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DailyClaim {
+    mapping(address => uint256) public lastClaim;
+
+    function claim() external {
+        require(block.timestamp >= lastClaim[msg.sender] + 1 days, "Too early");
+        lastClaim[msg.sender] = block.timestamp;
+    }
+}
