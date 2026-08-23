@@ -195,3 +195,13 @@ contract SeasonTracker {
         currentSeason++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BadgeSystem {
+    mapping(address => mapping(uint256 => bool)) public hasBadge;
+
+    function earnBadge(uint256 badgeId) external {
+        hasBadge[msg.sender][badgeId] = true;
+    }
+}
