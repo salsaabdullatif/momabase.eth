@@ -165,3 +165,13 @@ contract DailyClaim {
         lastClaim[msg.sender] = block.timestamp;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReferralCode {
+    mapping(address => string) public codeOf;
+
+    function setCode(string calldata code) external {
+        codeOf[msg.sender] = code;
+    }
+}
