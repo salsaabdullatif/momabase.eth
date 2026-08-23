@@ -215,3 +215,13 @@ contract InventorySlot {
         inventory[msg.sender][slot] = itemId;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CraftingRecipe {
+    mapping(uint256 => uint256) public recipe; // input => output
+
+    function setRecipe(uint256 input, uint256 output) external {
+        recipe[input] = output;
+    }
+}
