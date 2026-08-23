@@ -205,3 +205,13 @@ contract BadgeSystem {
         hasBadge[msg.sender][badgeId] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract InventorySlot {
+    mapping(address => mapping(uint256 => uint256)) public inventory;
+
+    function setItem(uint256 slot, uint256 itemId) external {
+        inventory[msg.sender][slot] = itemId;
+    }
+}
