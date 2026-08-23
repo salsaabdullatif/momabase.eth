@@ -235,3 +235,13 @@ contract QuestStatus {
         completed[msg.sender][questId] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TeamStorage {
+    mapping(address => uint256) public teamOf;
+
+    function setTeam(uint256 teamId) external {
+        teamOf[msg.sender] = teamId;
+    }
+}
