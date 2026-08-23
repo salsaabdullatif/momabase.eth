@@ -225,3 +225,13 @@ contract CraftingRecipe {
         recipe[input] = output;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract QuestStatus {
+    mapping(address => mapping(uint256 => bool)) public completed;
+
+    function completeQuest(uint256 questId) external {
+        completed[msg.sender][questId] = true;
+    }
+}
