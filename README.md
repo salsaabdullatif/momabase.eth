@@ -185,3 +185,13 @@ contract LeaderboardScore {
         score[msg.sender] = newScore;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SeasonTracker {
+    uint256 public currentSeason = 1;
+
+    function nextSeason() external {
+        currentSeason++;
+    }
+}
