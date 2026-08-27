@@ -275,3 +275,13 @@ contract SpeedStat {
         speed[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MagicPower {
+    mapping(address => uint256) public magic;
+
+    function setMagic(uint256 value) external {
+        magic[msg.sender] = value;
+    }
+}
