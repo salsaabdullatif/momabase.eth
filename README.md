@@ -285,3 +285,13 @@ contract MagicPower {
         magic[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract VitalityStat {
+    mapping(address => uint256) public vitality;
+
+    function setVitality(uint256 value) external {
+        vitality[msg.sender] = value;
+    }
+}
