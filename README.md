@@ -265,3 +265,13 @@ contract AgilityStat {
         agility[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SpeedStat {
+    mapping(address => uint256) public speed;
+
+    function setSpeed(uint256 value) external {
+        speed[msg.sender] = value;
+    }
+}
