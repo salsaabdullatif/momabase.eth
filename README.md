@@ -245,3 +245,13 @@ contract TeamStorage {
         teamOf[msg.sender] = teamId;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ClanStorage {
+    mapping(address => string) public clanOf;
+
+    function setClan(string calldata clan) external {
+        clanOf[msg.sender] = clan;
+    }
+}
