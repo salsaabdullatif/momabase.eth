@@ -255,3 +255,13 @@ contract ClanStorage {
         clanOf[msg.sender] = clan;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AgilityStat {
+    mapping(address => uint256) public agility;
+
+    function setAgility(uint256 value) external {
+        agility[msg.sender] = value;
+    }
+}
