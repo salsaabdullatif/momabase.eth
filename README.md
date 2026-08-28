@@ -335,3 +335,13 @@ contract CreditScore {
         credit[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract GloryPoints {
+    mapping(address => uint256) public glory;
+
+    function addGlory(uint256 value) external {
+        glory[msg.sender] += value;
+    }
+}
