@@ -325,3 +325,13 @@ contract FamePoints {
         fame[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CreditScore {
+    mapping(address => uint256) public credit;
+
+    function setCredit(uint256 value) external {
+        credit[msg.sender] = value;
+    }
+}
