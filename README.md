@@ -345,3 +345,13 @@ contract GloryPoints {
         glory[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NotorietyScore {
+    mapping(address => uint256) public notoriety;
+
+    function setNotoriety(uint256 value) external {
+        notoriety[msg.sender] = value;
+    }
+}
