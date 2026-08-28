@@ -305,3 +305,13 @@ contract EnduranceStat {
         endurance[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReputationScore {
+    mapping(address => uint256) public reputation;
+
+    function setReputation(uint256 value) external {
+        reputation[msg.sender] = value;
+    }
+}
