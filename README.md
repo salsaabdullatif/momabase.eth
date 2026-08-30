@@ -405,3 +405,13 @@ contract AttendanceCount {
         attended[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FavoriteCount {
+    mapping(address => uint256) public favorites;
+
+    function addFavorite() external {
+        favorites[msg.sender]++;
+    }
+}
