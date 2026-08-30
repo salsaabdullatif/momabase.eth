@@ -395,3 +395,13 @@ contract ChannelCount {
         channels[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AttendanceCount {
+    mapping(address => uint256) public attended;
+
+    function attend() external {
+        attended[msg.sender]++;
+    }
+}
