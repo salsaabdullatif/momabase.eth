@@ -424,4 +424,13 @@ contract SearchCount {
     function addSearch() external {
         searches[msg.sender]++;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ImportCount {
+    mapping(address => uint256) public imports;
+
+    function addImport() external {
+        imports[msg.sender]++;
+    }
 }
