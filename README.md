@@ -355,3 +355,13 @@ contract NotorietyScore {
         notoriety[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FollowingCount {
+    mapping(address => uint256) public following;
+
+    function follow() external {
+        following[msg.sender]++;
+    }
+}
