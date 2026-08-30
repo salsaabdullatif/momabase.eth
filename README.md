@@ -365,3 +365,13 @@ contract FollowingCount {
         following[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BookmarkCount {
+    mapping(address => uint256) public bookmarks;
+
+    function addBookmark() external {
+        bookmarks[msg.sender]++;
+    }
+}
