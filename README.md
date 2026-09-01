@@ -434,3 +434,13 @@ contract ImportCount {
         imports[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DeleteCount {
+    mapping(address => uint256) public deletes;
+
+    function addDelete() external {
+        deletes[msg.sender]++;
+    }
+}
