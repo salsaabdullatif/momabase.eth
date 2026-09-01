@@ -444,3 +444,13 @@ contract DeleteCount {
         deletes[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HideCount {
+    mapping(address => uint256) public hidden;
+
+    function addHide() external {
+        hidden[msg.sender]++;
+    }
+}
