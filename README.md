@@ -454,3 +454,13 @@ contract HideCount {
         hidden[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SubscribeCount {
+    mapping(address => uint256) public subscriptions;
+
+    function subscribe() external {
+        subscriptions[msg.sender]++;
+    }
+}
