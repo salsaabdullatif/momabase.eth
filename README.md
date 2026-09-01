@@ -464,3 +464,13 @@ contract SubscribeCount {
         subscriptions[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SwapCount {
+    mapping(address => uint256) public swaps;
+
+    function addSwap() external {
+        swaps[msg.sender]++;
+    }
+}
