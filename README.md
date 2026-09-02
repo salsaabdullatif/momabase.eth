@@ -504,3 +504,13 @@ contract DeployCount {
         deploys[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract GasSpent {
+    mapping(address => uint256) public gasSpent;
+
+    function addGas(uint256 amount) external {
+        gasSpent[msg.sender] += amount;
+    }
+}
