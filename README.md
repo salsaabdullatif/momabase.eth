@@ -494,3 +494,13 @@ contract VoteCount {
         votes[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DeployCount {
+    mapping(address => uint256) public deploys;
+
+    function addDeploy() external {
+        deploys[msg.sender]++;
+    }
+}
