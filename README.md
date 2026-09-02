@@ -534,3 +534,13 @@ contract BasenameOwned {
         hasBasename[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BaseGuildJoined {
+    mapping(address => bool) public joined;
+
+    function joinGuild() external {
+        joined[msg.sender] = true;
+    }
+}
