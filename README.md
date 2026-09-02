@@ -524,3 +524,13 @@ contract FaucetClaim {
         claims[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BasenameOwned {
+    mapping(address => bool) public hasBasename;
+
+    function setOwned() external {
+        hasBasename[msg.sender] = true;
+    }
+}
