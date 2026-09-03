@@ -554,3 +554,13 @@ contract WalletConnected {
         connected[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EthHeld {
+    mapping(address => uint256) public amount;
+
+    function setAmount(uint256 value) external {
+        amount[msg.sender] = value;
+    }
+}
