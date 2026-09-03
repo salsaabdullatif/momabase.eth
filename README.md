@@ -544,3 +544,13 @@ contract BaseGuildJoined {
         joined[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract WalletConnected {
+    mapping(address => bool) public connected;
+
+    function connect() external {
+        connected[msg.sender] = true;
+    }
+}
