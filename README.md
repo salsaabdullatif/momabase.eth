@@ -594,3 +594,13 @@ contract Commits1 {
         reached[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Holding1000 {
+    mapping(address => bool) public reached;
+
+    function unlock() external {
+        reached[msg.sender] = true;
+    }
+}
