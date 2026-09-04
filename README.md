@@ -604,3 +604,13 @@ contract Holding1000 {
         reached[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LearnNewcomer {
+    mapping(address => bool) public unlocked;
+
+    function unlock() external {
+        unlocked[msg.sender] = true;
+    }
+}
