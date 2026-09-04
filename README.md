@@ -614,3 +614,13 @@ contract LearnNewcomer {
         unlocked[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PinHolder {
+    mapping(address => bool) public holdsPin;
+
+    function mark() external {
+        holdsPin[msg.sender] = true;
+    }
+}
